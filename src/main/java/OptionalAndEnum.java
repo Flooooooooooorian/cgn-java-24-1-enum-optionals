@@ -3,18 +3,18 @@ import java.util.Optional;
 public class OptionalAndEnum {
 
     public static void main(String[] args) {
-        Termin termin = new Termin("2", Weekday.MONDAY);
-        termin.setWeekDay(Weekday.SATURDAY);
+        Appointment appointment = new Appointment("2", Weekday.MONDAY);
+        appointment.setWeekDay(Weekday.SATURDAY);
 
 
-        System.out.println(termin.getWeekDay());
+        System.out.println(appointment.getWeekDay());
 
-        Termin termin2 = new Termin("3", Weekday.SUNDAY);
-        termin2.setWeekDay(Weekday.MONDAY);
+        Appointment appointment2 = new Appointment("3", Weekday.SUNDAY);
+        appointment2.setWeekDay(Weekday.MONDAY);
 
-        System.out.println(termin2.getWeekDay());
+        System.out.println(appointment2.getWeekDay());
 
-        if (termin.getWeekDay() == Weekday.SATURDAY) {
+        if (appointment.getWeekDay() == Weekday.SATURDAY) {
             System.out.println("Ja es ist Samstag!");
         }
 
@@ -26,15 +26,15 @@ public class OptionalAndEnum {
 
         TerminRepo terminRepo = new TerminRepo();
 
-        Optional<Termin> optionalTermin = terminRepo.getTerminById("1");
+        Optional<Appointment> optionalTermin = terminRepo.getTerminById("1");
 
         System.out.println(optionalTermin);
 
 
         if (optionalTermin.isPresent()) {
-            Termin t1 = optionalTermin.get();
+            Appointment myAppointment = optionalTermin.get();
 
-            System.out.println(t1.getWeekDay());
+            System.out.println(myAppointment.getWeekDay());
         }
         else {
             System.out.println("Optional is empty");

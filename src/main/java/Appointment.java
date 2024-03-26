@@ -1,10 +1,10 @@
-public class Termin {
+public class Appointment {
 
     private String id;
     private Weekday weekDay;
 
 
-    public Termin(String id, Weekday weekDay) {
+    public Appointment(String id, Weekday weekDay) {
         this.id = id;
         this.weekDay = weekDay;
     }
