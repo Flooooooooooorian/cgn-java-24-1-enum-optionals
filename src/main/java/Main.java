@@ -33,9 +33,6 @@ public class Main {
                 .map(f -> f.toUpperCase())
                 .collect(Collectors.toList());
 
-        System.out.println(fruits);
-        System.out.println(result);
-
 
         int sum = fruits.stream()
                 .map(fruit -> fruit.length())
