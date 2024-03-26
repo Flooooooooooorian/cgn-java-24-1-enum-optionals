@@ -54,5 +54,7 @@ public class Main {
                     return f1 + f2;
                 }));
 
+        System.out.println("Hello World");
+
     }
 }
