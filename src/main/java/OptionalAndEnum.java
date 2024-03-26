@@ -32,9 +32,9 @@ public class OptionalAndEnum {
 
 
         if (optionalTermin.isPresent()) {
-            Appointment t1 = optionalTermin.get();
+            Appointment myAppointment = optionalTermin.get();
 
-            System.out.println(t1.getWeekDay());
+            System.out.println(myAppointment.getWeekDay());
         }
         else {
             System.out.println("Optional is empty");
