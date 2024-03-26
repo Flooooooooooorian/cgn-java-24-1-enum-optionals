@@ -1,6 +1,4 @@
-import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -22,8 +20,8 @@ public class Main {
                 });
 
         fruits.stream()
-                .map((f) -> new Termin(f, Weekday.MONDAY))
-                .map(termin -> termin.toString())
+                .map((f) -> new Appointment(f, Weekday.MONDAY))
+                .map(appointment -> appointment.toString())
                 .forEach(length -> {
                     System.out.println(length);
                 });
